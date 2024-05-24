@@ -1,0 +1,116 @@
+/* font-family: "Montserrat", sans-serif; */
+/* font-family: "DM Sans", sans-serif; */
+/* font-family: "Dancing Script", cursive; */
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   font-size: 62.5%;
+}
+
+body {
+   color: #333;
+}
+
+h1,
+h2 {
+   font-family: "Montserrat", sans-serif;
+   font-size: 2.4rem;
+}
+
+p {
+   font-family: "DM Sans", sans-serif;
+   font-size: 1.5rem;
+   color: hsl(238, 27%, 28%);
+   margin: 2rem 0;
+}
+
+#app {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: linear-gradient(45deg, hsl(254, 94%, 20%), hsl(284, 100%, 50%));
+   background-size: 200% 200%;
+   animation: gradient 10s ease infinite;
+   padding: 2rem;
+}
+
+@keyframes gradient {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
+}
+
+/* Card */
+.card {
+   max-width: 428px;
+   text-align: center;
+   background-color: hsl(0, 0%, 100%);
+   padding: 5rem 6rem;
+   border-radius: 0.5rem;
+   box-shadow: 0 20px 50px 0 hsla(0, 0%, 0%, 0.8);
+}
+
+.card.hide {
+   display: none;
+}
+
+.card .cookie {
+   cursor: pointer;
+}
+
+.card .sorte {
+   font-family: "Dancing Script", cursive;
+   font-size: 2.4rem;
+   background-color: #e4edf1;
+   padding: 1rem;
+   box-shadow: 2px 2px 2px 0 hsla(0, 0%, 0%, 0.3);
+}
+
+.card .btn {
+   font-family: "DM Sans", sans-serif;
+   font-size: 1.5rem;
+   color: hsl(0, 0%, 100%);
+   background-color: hsl(35, 100%, 50%);
+   padding: 1.5rem 2.5rem;
+   border: none;
+   border-radius: 0.2rem;
+   cursor: pointer;
+}
+
+/* Animations */
+.card .cookie:hover {
+   animation: shake 200ms ease-in-out infinite;
+}
+
+@keyframes shake {
+   0% {
+      transform: translate(2px, 3px);
+   }
+
+   50% {
+      transform: translate(3px, -3px);
+   }
+}
+
+.card .sorte {
+   animation: sorte 1100ms ease-out forwards;
+}
+
+@keyframes sorte {
+   0% {
+      opacity: 0.2;
+      transform: translateY(200px) scale(0.2);
+   }
+}
